@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
-from product.views import my_app, ProductViewSet, BasketProductViewSet, SelfBasketProductViewSet
+from product.views import my_app, ProductViewSet, SelfBasketProductViewSet
 from core.views import UserViewSet
 from article.views import ArticleViewSet
 
@@ -29,7 +29,6 @@ from rest_framework_simplejwt.views import (
 
 router = routers.DefaultRouter()
 router.register('products', ProductViewSet)
-router.register('basket-products', BasketProductViewSet, basename=True)
 router.register('my-basket', SelfBasketProductViewSet)
 router.register('users', UserViewSet)
 router.register('articles', ArticleViewSet)
